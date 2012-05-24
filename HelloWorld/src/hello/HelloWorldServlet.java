@@ -69,7 +69,7 @@ public class HelloWorldServlet extends HttpServlet {
 		Collections.sort(resultList, new CustomComparator());
 		
 		request.setAttribute("products", resultList);
-		request.getRequestDispatcher("/products.jsp").forward(request, response);
+		request.getRequestDispatcher("/products.jsp").forward(request, response); 
 		
 		em.close();
 	}
