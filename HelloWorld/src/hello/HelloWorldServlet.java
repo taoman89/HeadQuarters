@@ -118,7 +118,7 @@ public class HelloWorldServlet extends HttpServlet {
 
 		Map properties = new HashMap();
 		properties.put(PersistenceUnitProperties.NON_JTA_DATASOURCE, ds);
-		//
+		
 		//properties.put("eclipselink.target-database", "com.sap.persistence.platform.database.HDBPlatform"); // add HANA property to EMF
 		emf = Persistence.createEntityManagerFactory("JPAModel", properties);
 	}
