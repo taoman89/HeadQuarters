@@ -104,7 +104,7 @@ public class HelloWorldServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		doGet(request, response);
+		doGet(request, response); 
 	}
 	
 	@Override
@@ -116,9 +116,9 @@ public class HelloWorldServlet extends HttpServlet {
 			throw new ServletException(e);
 		}
 
-		Map properties = new HashMap();
+		Map properties = new HashMap(); 
 		properties.put(PersistenceUnitProperties.NON_JTA_DATASOURCE, ds);
-		
+		//
 		//properties.put("eclipselink.target-database", "com.sap.persistence.platform.database.HDBPlatform"); // add HANA property to EMF
 		emf = Persistence.createEntityManagerFactory("JPAModel", properties);
 	}
