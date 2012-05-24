@@ -108,9 +108,9 @@ public class HelloWorldServlet extends HttpServlet {
 	}
 	
 	@Override
-	public void init() throws ServletException {
+	public void init() throws ServletException { 
 		try {
-			InitialContext ctx = new InitialContext();
+			InitialContext ctx = new InitialContext(); 
 			ds = (DataSource) ctx.lookup("java:comp/env/jdbc/DefaultDB");
 		} catch (NamingException e) {
 			throw new ServletException(e);
